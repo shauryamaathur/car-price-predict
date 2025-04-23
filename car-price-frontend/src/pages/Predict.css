@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* Background elements */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Gear Design */
+.gear {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #c0c0c0, #7f8c8d);
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px #555;
+    animation: rotate 10s linear infinite;
+    opacity: 0.2;
+}
+
+.gear.small {
+    width: 50px;
+    height: 50px;
+    bottom: 20%;
+    right: 15%;
+    animation-duration: 6s;
+}
+
+.gear:nth-child(1) {
+    top: 10%;
+    left: 10%;
+}
+
+.gear:nth-child(2) {
+    bottom: 15%;
+    right: 20%;
+}
+
+/* Screwdriver Design */
+.screwdriver {
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background: linear-gradient(to bottom, #d3d3d3, #606060);
+    top: 50%;
+    left: 75%;
+    transform: rotate(45deg);
+    opacity: 0.2;
+}
+
+/* Animations */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Form Container */
+.predict-page .container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Form Fields */
+.predict-page label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #f4f4f4;
+    margin-bottom: 8px;
+}
+
+.predict-page select, 
+.predict-page input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/* Button */
+.predict-page button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4500;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.predict-page button:hover {
+    background: #ff6347;
+    transform: scale(1.05);
+}
+
+.predict-page #result {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00ffcc;
+    margin-top: 20px; /* Adds space above result */
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(0, 255, 204, 0.1);
+    box-shadow: 0px 0px 8px rgba(0, 255, 204, 0.5);
+    transform: scale(1.08);
+    box-shadow: 0px 0px 12px rgba(255, 99, 71, 0.8);
+}
+
+
+/* Center the entire prediction form */
+.predict-page .container {
+    width: 80%;
+    max-width: 600px; /* Keeps the form a good size */
+    margin: 50px auto; /* Centers the form */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.predict-page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all inputs & labels */
+    width: 100%;
+}
+
+
+/* 🎥 Full-Screen Background Video for Predict Page */
+.background-video {
+    position: fixed; /* Keeps it as the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills the screen */
+    z-index: -1; /* Puts it behind everything */
+    opacity: 0.2; /* ✅ Adjust this for visibility (0.1 - 0.3 recommended) */
+}
+
+
+

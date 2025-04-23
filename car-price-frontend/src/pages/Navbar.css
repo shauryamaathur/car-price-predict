@@ -1,0 +1,72 @@
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff4500;
+
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff4500;
+}
+
+.gear-icon {
+    display: inline-block; /* Keeps it aligned */
+    font-size: 1.2em; /* Slightly bigger gear */
+    animation: rotateGear 7s linear infinite; /* Smooth infinite rotation */
+}
+
+
+@keyframes rotateGear {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.logo {
+    display: inline-block;
+    cursor: pointer; /* Makes it clear it's interactive */
+}
+
+.logo:hover,
+.logo:active {
+    animation: smoothRunaway 2.5s ease-in-out forwards;
+}
+
+@keyframes smoothRunaway {
+    0% { transform: translateX(0); } /* Start position */
+    25% { transform: translateX(80px) rotate(2deg); } /* Moves right */
+    50% { transform: translateX(160px) rotate(1deg); } /* Moves further */
+    75% { transform: translateX(240px) rotate(0deg); } /* Almost reaching "Home" */
+    100% { transform: translateX(300px) rotate(0deg); } /* Fully escaped */
+}

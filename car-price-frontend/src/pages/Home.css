@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    text-align: center;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+/* 🌟 Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #1f1f2e, #10101a);
+    text-align: center;
+    padding: 50px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff4500;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* 🚀 Call to Action Button */
+.cta-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background: linear-gradient(90deg, #ff8c00, #ff3b3b);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(255, 140, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(255, 140, 0, 0.8);
+}
+
+/* ✅ Why Choose Us */
+.why-choose {
+    padding: 60px 10%;
+    background: rgba(255, 255, 255, 0.05);
+  
+}
+
+.why-choose h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff4500;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+/* 🔍 How It Works */
+.how-it-works {
+    padding: 60px 10%;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ff4500;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.step:hover {
+    transform: scale(1.05);
+}
+
+/* 🚗 Final CTA */
+.final-cta {
+    padding: 60px;
+    background: #10101a;
+}
+
+.final-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Center sections */
+section {
+    width: 80%; /* Ensures content is not too wide */
+    max-width: 1200px; /* Keeps a good layout size */
+    margin: 0 auto; /* Centers section horizontally */
+    text-align: center; /* Ensures text stays centered */
+    padding: 60px 0; /* Adds spacing */
+}
+
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.feature-card, .step {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.feature-card:hover, .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+
+/* 🎥 Full-Screen Background Video */
+.background-video {
+    position: fixed; /* Stays as the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers entire screen */
+    z-index: -1; /* Puts it behind content */
+    opacity: 0.2; /* ✅ Adjust for visibility (try 0.1 - 0.3) */
+}

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background elements */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Gear Design */
+.gear {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #c0c0c0, #7f8c8d);
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px #555;
+    animation: rotate 10s linear infinite;
+    opacity: 0.2;
+}
+
+.gear.small {
+    width: 50px;
+    height: 50px;
+    bottom: 20%;
+    right: 15%;
+    animation-duration: 6s;
+}
+
+.gear:nth-child(1) {
+    top: 10%;
+    left: 10%;
+}
+
+.gear:nth-child(2) {
+    bottom: 15%;
+    right: 20%;
+}
+
+/* Screwdriver Design */
+.screwdriver {
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background: linear-gradient(to bottom, #d3d3d3, #606060);
+    top: 50%;
+    left: 75%;
+    transform: rotate(45deg);
+    opacity: 0.2;
+}
+
+/* Animations */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Form Container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Form Fields */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+select, input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4500;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff6347;
+    transform: scale(1.05);
+}
+
+/* Prediction Result */
+#result {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #00ffcc;
+    font-weight: bold;
+}
