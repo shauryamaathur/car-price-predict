@@ -7,7 +7,7 @@ from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from sklearn.preprocessing import OneHotEncoder
 
 # Load the dataset
-file_path = "/Users/shaurya/Documents/car_price/CarPrice_Assignment.csv"
+file_path = "/Users/shaurya/Documents/my_projects/car_price/CarPrice_Assignment.csv"
 df = pd.read_csv(file_path)
 
 # Drop unnecessary columns
@@ -54,8 +54,8 @@ print(f"Mean Absolute Error (MAE): {mae:.2f}")
 print(f"Root Mean Squared Error (RMSE): {rmse:.2f}")
 
 # Save the trained model and encoder
-model_path = "/Users/shaurya/Documents/car_price/car_price_model.pkl"
-encoder_path = "/Users/shaurya/Documents/car_price/encoder.pkl"
+model_path = "/Users/shaurya/Documents/my_projects/car_price/car_price_model.pkl"
+encoder_path = "/Users/shaurya/Documents/my_projects/car_price/encoder.pkl"
 
 joblib.dump(model, model_path)
 joblib.dump(encoder, encoder_path)
