@@ -9,8 +9,8 @@ app = Flask(__name__)
 CORS(app)  
 
 # Paths
-MODEL_PATH = "/Users/shaurya/Documents/my_projects/car_price/car_price_model.pkl"
-ENCODER_PATH = "/Users/shaurya/Documents/my_projects/car_price/encoder.pkl"
+MODEL_PATH = "/Users/shaurya/Documents/my_projects/car_price/backend/car_price_model.pkl"
+ENCODER_PATH = "/Users/shaurya/Documents/my_projects/car_price/backend/encoder.pkl"
 
 # Load the trained model and encoder
 if os.path.exists(MODEL_PATH) and os.path.exists(ENCODER_PATH):
