@@ -54,8 +54,8 @@ print(f"Mean Absolute Error (MAE): {mae:.2f}")
 print(f"Root Mean Squared Error (RMSE): {rmse:.2f}")
 
 # Save the trained model and encoder
-model_path = "/Users/shaurya/Documents/my_projects/car_price/car_price_model.pkl"
-encoder_path = "/Users/shaurya/Documents/my_projects/car_price/encoder.pkl"
+model_path = "/Users/shaurya/Documents/my_projects/car_price/backend/car_price_model.pkl"
+encoder_path = "/Users/shaurya/Documents/my_projects/car_price/backend/encoder.pkl"
 
 joblib.dump(model, model_path)
 joblib.dump(encoder, encoder_path)
