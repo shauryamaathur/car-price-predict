@@ -1,0 +1,3 @@
+# Ignore model and encoder .pkl files
+car_price_model.pkl
+encoder.pkl
