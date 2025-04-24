@@ -6,7 +6,7 @@ import pandas as pd
 import os
 
 app = Flask(__name__)
-CORS(app)  
+CORS(app, origins=["http://localhost:3000", "https://car-price-predict-68li.vercel.app"]) 
 
 # Get the directory where the app.py file is located and use it to create relative paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
