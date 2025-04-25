@@ -30,6 +30,7 @@ const Predict = () => {
   });
 
   const [prediction, setPrediction] = useState("");
+  const [loading, setLoading] = useState(false); // Loading state
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -37,6 +38,8 @@ const Predict = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Start loader
+    setPrediction(""); // Clear previous
     try {
       const response = await fetch("https://car-price-predict-g03p.onrender.com/predict", {
         method: "POST",
@@ -56,13 +59,13 @@ const Predict = () => {
       console.error("Error fetching prediction:", error);
       setPrediction("Error: Could not fetch price");
     }
+    setLoading(false); // Stop loader
   };
 
   return (
     <div className="predict-page">
-      <Navbar /> {/* Navigation Bar */}
-      
-      {/* 🎥 Background Video */}
+      <Navbar />
+
       <video autoPlay loop muted playsInline className="background-video">
         <source src="/assets/predict-bg.mp4" type="video/mp4" />
       </video>
@@ -112,10 +115,12 @@ const Predict = () => {
 
           <button type="submit">Predict Price</button>
         </form>
-       
 
-        
-        <div id="result">{prediction}</div>
+        {loading ? (
+          <div className="loader"></div>
+        ) : (
+          <div id="result">{prediction}</div>
+        )}
       </div>
     </div>
   );
