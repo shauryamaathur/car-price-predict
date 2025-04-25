@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import "./Predict.css";
 
@@ -30,6 +30,8 @@ const Predict = () => {
   });
 
   const [prediction, setPrediction] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -37,6 +39,21 @@ const Predict = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setPrediction("");
+    setProgress(0);
+    setLoading(true);
+
+    // Start fake progress loader
+    let interval = setInterval(() => {
+      setProgress((old) => {
+        if (old >= 99) {
+          clearInterval(interval);
+          return old;
+        }
+        return old + 1;
+      });
+    }, 30);
+
     try {
       const response = await fetch("https://car-price-predict-g03p.onrender.com/predict", {
         method: "POST",
@@ -56,13 +73,16 @@ const Predict = () => {
       console.error("Error fetching prediction:", error);
       setPrediction("Error: Could not fetch price");
     }
+
+    clearInterval(interval);
+    setProgress(100);
+    setTimeout(() => setLoading(false), 300); // smooth out animation
   };
 
   return (
     <div className="predict-page">
-      <Navbar /> {/* Navigation Bar */}
-      
-      {/* 🎥 Background Video */}
+      <Navbar />
+
       <video autoPlay loop muted playsInline className="background-video">
         <source src="/assets/predict-bg.mp4" type="video/mp4" />
       </video>
@@ -70,7 +90,6 @@ const Predict = () => {
       <div className="container">
         <h1>Top Gear Car Price Predictor</h1>
         <form onSubmit={handleSubmit}>
-
           <label htmlFor="fuelType">Fuel Type:</label>
           <select id="fuelType" value={formData.fuelType} onChange={handleChange}>
             <option value="gas">Petrol</option>
@@ -112,10 +131,15 @@ const Predict = () => {
 
           <button type="submit">Predict Price</button>
         </form>
-       
 
-        
-        <div id="result">{prediction}</div>
+        {loading ? (
+          <div className="progress-bar-container">
+            <div className="progress-bar" style={{ width: `${progress}%` }}></div>
+            <div className="progress-text">{progress}%</div>
+          </div>
+        ) : (
+          <div id="result">{prediction}</div>
+        )}
       </div>
     </div>
   );
