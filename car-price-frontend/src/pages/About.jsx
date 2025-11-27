@@ -15,21 +15,41 @@ const About = () => {
 
       {/* 🌟 About Hero Section */}
       <section className="about-hero">
-        <h1>Meet The Minds Behind T⛭pGear.AI</h1>
-        <p>From an idea to a reality—this is our journey.</p>
+        <h1>Meet The Mind Behind T⛭pGear.AI</h1>
+        <p>From a spark of an idea to a complete AI-driven solution.</p>
       </section>
 
       {/* 🚗 The Story */}
       <section className="our-story">
         <h2>🏁 How It All Started</h2>
         <p>
-          It all started with three friends—Shaurya, Raghav, and Rev—who shared a passion for cars, technology, and solving real-world problems. Rev, a die-hard Formula 1 fan and car enthusiast, had always been fascinated by automobiles and their engineering. One day, while browsing used car listings, he realized how difficult it was for buyers to determine whether they were getting a fair deal. Feeling frustrated, he brought up the issue with Raghav, the data analyst of the group, and asked: "What if there was a way to stop people from getting scammed when buying used cars?"
+          T⛭pGear.AI was born from the curiosity and determination of a single
+          individual — <b>Shaurya</b>. Fascinated by automobiles and equally passionate
+          about technology, Shaurya spent years exploring how AI could solve real,
+          meaningful problems in everyday life.
         </p>
+
         <p>
-          Raghav, intrigued by the idea, began digging into market data and quickly realized that this was a **huge problem**. Many buyers were unknowingly overpaying for cars because they lacked proper pricing insights. Dealers often manipulated prices, leaving customers vulnerable to unfair deals. The data was clear—people needed a reliable way to determine a car’s true value.
+          One day, while browsing used car marketplaces, Shaurya noticed a huge
+          issue: <b>there was no reliable way for buyers to know the true value of a
+          car.</b> Prices were inconsistent, dealers often manipulated numbers, and
+          buyers had no proper data-driven insights. People were getting
+          overcharged simply due to lack of transparency.
         </p>
+
         <p>
-          That’s when Shaurya, the problem-solver of the trio, stepped in. With a determination to create real impact, he envisioned a Powerful AI system that could analyze thousands of real-time car listings and market trends to generate accurate, unbiased price predictions. Together, they combined their skills—Rev’s knowledge of cars, Raghav’s expertise in data analysis, and Shaurya’s problem-solving mindset—to build T⛭pGear.AI, a platform designed to make car buying transparent, fair, and stress-free for everyone.
+          That’s when Shaurya decided to take matters into his own hands.
+          Leveraging machine learning, data analysis, and a deep understanding of
+          automotive parameters, he began building a system that could analyze
+          thousands of listings, learn from market trends, and instantly predict a
+          fair and accurate price for any car.
+        </p>
+
+        <p>
+          What started as a simple experiment quickly evolved into a powerful
+          platform: <b>T⛭pGear.AI</b>. Designed with precision, transparency, and
+          fairness at its core, the platform ensures that no buyer ever has to
+          guess a car’s true value again.
         </p>
       </section>
 
@@ -37,7 +57,11 @@ const About = () => {
       <section className="mission">
         <h2>🌍 Our Mission</h2>
         <p>
-          At T⛭pGear.AI, we believe that buying a car should be exciting, not stressful. Our goal is to empower buyers with AI-driven price predictions, so no one has to worry about being overcharged ever again. We stand for Transparency, Fairness, and Innovation, ensuring that every buyer knows exactly what a car is worth before making a decision.
+          At T⛭pGear.AI, the mission is simple yet impactful — to make car buying
+          transparent, fair, and stress-free. With AI-powered price predictions,
+          every user can confidently know the actual worth of a car before making
+          a decision. Shaurya’s vision is to empower buyers with knowledge,
+          eliminate scams, and bring honesty to the automobile marketplace.
         </p>
       </section>
 
@@ -47,15 +71,26 @@ const About = () => {
         <div className="steps">
           <div className="step">
             <h3>1. Enter Your Car Details</h3>
-            <p>Provide specifications like make, model, fuel type, and mileage.</p>
+            <p>
+              Provide specifications like make, model, fuel type, engine size, and
+              mileage.
+            </p>
           </div>
+
           <div className="step">
             <h3>2. AI Analyzes Market Data</h3>
-            <p>Our system compares your car with thousands of real-time listings.</p>
+            <p>
+              The ML system compares your car with thousands of real market
+              listings and historical trends.
+            </p>
           </div>
+
           <div className="step">
             <h3>3. Get Your True Price</h3>
-            <p>Instantly receive an accurate, unbiased car price estimate.</p>
+            <p>
+              Instantly receive an accurate, unbiased price estimate — backed by
+              data, not guesswork.
+            </p>
           </div>
         </div>
       </section>
@@ -64,7 +99,7 @@ const About = () => {
       <section className="final-cta">
         <h2>🚀 Ready to Know Your Car’s Value?</h2>
         <Link to="/predict">
-        <button className="cta-button">Get Your Free Estimate Now</button>
+          <button className="cta-button">Get Your Free Estimate Now</button>
         </Link>
       </section>
     </div>
