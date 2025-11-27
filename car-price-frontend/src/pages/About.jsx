@@ -23,9 +23,8 @@ const About = () => {
       <section className="our-story">
         <h2>🏁 How It All Started</h2>
         <p>
-          T⛭pGear.AI was born from the curiosity and determination of a single
-          individual — <b>Shaurya</b>. Fascinated by automobiles and equally passionate
-          about technology, Shaurya spent years exploring how AI could solve real,
+          Fascinated by automobiles and equally passionate
+          about technology, Shaurya spent months exploring how AI could solve real,
           meaningful problems in everyday life.
         </p>
 
